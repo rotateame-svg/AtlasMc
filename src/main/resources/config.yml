@@ -112,3 +112,20 @@ shop:
     - {material: ENDER_PEARL, buy: 150, sell: 35}
     - {material: EXPERIENCE_BOTTLE, buy: 100, sell: 0}
     - {material: TNT, buy: 200, sell: 0}
+
+# /ah  (Açık Artırma / Pazar)
+ah:
+  max-listings: 10
+  duration-hours: 48
+  tax-percent: 5       # Satıştan kesilen vergi (%)
+  min-price: 1
+
+# /order  (Alım siparişleri)
+order:
+  max-orders: 5
+
+# /3x3kazmaver  (Atlas Mc Kristal Kazma)
+pickaxe:
+  material: DIAMOND_PICKAXE
+  name: "&b&lAtlas Mc Kristal Kazma"
+  max-days: 100

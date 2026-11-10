@@ -14,6 +14,13 @@ commands:
     description: Kristal bakiyeni gösterir ve marketi açar
   kristalmarket:
     description: Kristal marketini açar
+  ah:
+    description: Açık artırma / pazar
+  order:
+    description: Alım siparişleri
+  '3x3kazmaver':
+    description: Süreli 3x3 Kristal Kazma verir (sadece OP)
+    usage: /3x3kazmaver <gün> [oyuncu]
 permissions:
   atlasmc.admin:
     description: Yönetici komutları

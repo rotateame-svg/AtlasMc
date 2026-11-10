@@ -35,6 +35,9 @@ public class AtlasMC extends JavaPlugin {
     private ShopManager shop;
     private MarketManager market;
     private BoardManager board;
+    private AuctionManager auction;
+    private OrderManager orders;
+    private PickaxeManager pickaxe;
 
     @Override
     public void onEnable() {
@@ -53,17 +56,26 @@ public class AtlasMC extends JavaPlugin {
         shop = new ShopManager(this);
         market = new MarketManager(this);
         board = new BoardManager(this);
+        auction = new AuctionManager(this);
+        orders = new OrderManager(this);
+        pickaxe = new PickaxeManager(this);
 
         getServer().getPluginManager().registerEvents(afk, this);
         getServer().getPluginManager().registerEvents(spawners, this);
         getServer().getPluginManager().registerEvents(shop, this);
         getServer().getPluginManager().registerEvents(market, this);
         getServer().getPluginManager().registerEvents(board, this);
+        getServer().getPluginManager().registerEvents(auction, this);
+        getServer().getPluginManager().registerEvents(orders, this);
+        getServer().getPluginManager().registerEvents(pickaxe, this);
 
         getCommand("afk").setExecutor(afk);
         getCommand("shop").setExecutor(shop);
         getCommand("kristal").setExecutor(market);
         getCommand("kristalmarket").setExecutor(market);
+        getCommand("ah").setExecutor(auction);
+        getCommand("order").setExecutor(orders);
+        getCommand("3x3kazmaver").setExecutor(pickaxe);
 
         // Dakikada bir kristal (AFK odasında 2, normalde 1)
         getServer().getScheduler().runTaskTimer(this, () -> {
@@ -81,6 +93,8 @@ public class AtlasMC extends JavaPlugin {
         getServer().getScheduler().runTaskTimer(this, () -> {
             saveData();
             spawners.save();
+            auction.save();
+            orders.save();
         }, 6000L, 6000L);
 
         getLogger().info("AtlasMC aktif!");
@@ -91,6 +105,8 @@ public class AtlasMC extends JavaPlugin {
         if (afk != null) afk.returnAll();
         saveData();
         if (spawners != null) spawners.save();
+        if (auction != null) auction.save();
+        if (orders != null) orders.save();
     }
 
     // ---------- Ekonomi / Rank ----------
