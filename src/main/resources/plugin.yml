@@ -1,0 +1,20 @@
+name: AtlasMC
+main: net.atlasmc.AtlasMC
+version: 1.0.0
+api-version: '1.21'
+author: AtlasMC
+depend: [Vault]
+softdepend: [LuckPerms, Essentials]
+commands:
+  shop:
+    description: Market menüsünü açar
+  afk:
+    description: AFK odasına ışınlanır / geri döner
+  kristal:
+    description: Kristal bakiyeni gösterir ve marketi açar
+  kristalmarket:
+    description: Kristal marketini açar
+permissions:
+  atlasmc.admin:
+    description: Yönetici komutları
+    default: op
