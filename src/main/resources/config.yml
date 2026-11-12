@@ -1,131 +1,20 @@
-# ================= AtlasMC =================
-scoreboard:
-  title: "&b&lATLASMC"
-  sw-name: "Survival"        # Scoreboard'da "SW" satırında yazacak isim
-  ip: "oyna.atlasmc.net"
+# Bekleme suresi (saniye)
+cooldown-saniye: 10
 
-tab:
-  header: "&b&lAtlas Mc"
-  ip: "oyna.atlasmc.net"
+# isim: sunucudaki dunya klasoru adi
+# min/max: spawn'a (0,0) olan uzaklik, blok cinsinden
+dunyalar:
+  dunya:
+    isim: smp
+    min: 500
+    max: 5000
+  nether:
+    isim: smp_nether
+    min: 200
+    max: 2000
+  end:
+    isim: smp_the_end
+    min: 1000
+    max: 3000
 
-# LuckPerms grup adı -> görünecek rank
-ranks:
-  default: "&7Oyuncu"
-  vip: "&aVIP"
-  rehber: "&bRehber"
-  kurucu: "&4&lKurucu"
-
-crystal:
-  per-minute: 1
-  afk-per-minute: 2
-
-afk:
-  world: atlas_afk
-  blindness: true            # Kapkara görüntü için kör efekti
-
-spawner:
-  interval-seconds: 10       # Spawner kaç saniyede bir ürün/xp üretir
-  max-storage: 10000         # Her ürün için depo limiti
-
-# Kristal market + spawner ayarları
-# drops: MATERYAL: "min-max"
-spawners:
-  ZOMBIE:
-    name: "Zombi"
-    cost: 100
-    xp: 4
-    drops:
-      ROTTEN_FLESH: "1-3"
-  SKELETON:
-    name: "İskelet"
-    cost: 150
-    xp: 5
-    drops:
-      BONE: "1-2"
-      ARROW: "1-2"
-  COW:
-    name: "İnek"
-    cost: 200
-    xp: 3
-    drops:
-      BEEF: "1-3"
-      LEATHER: "0-2"
-  PIG:
-    name: "Domuz"
-    cost: 200
-    xp: 3
-    drops:
-      PORKCHOP: "1-3"
-  SPIDER:
-    name: "Örümcek"
-    cost: 250
-    xp: 5
-    drops:
-      STRING: "0-2"
-      SPIDER_EYE: "0-1"
-  CREEPER:
-    name: "Creeper"
-    cost: 400
-    xp: 6
-    drops:
-      GUNPOWDER: "0-2"
-  BLAZE:
-    name: "Blaze"
-    cost: 600
-    xp: 10
-    drops:
-      BLAZE_ROD: "0-1"
-  IRON_GOLEM:
-    name: "Demir Golem"
-    cost: 1000
-    xp: 8
-    drops:
-      IRON_INGOT: "1-3"
-      POPPY: "0-2"
-
-# /shop  (Sol tık: 1 al | Shift+Sol: 64 al | Sağ tık: 1 sat | Shift+Sağ: hepsini sat)
-shop:
-  title: "&8Atlas Shop"
-  items:
-    - {material: COBBLESTONE, buy: 5, sell: 1}
-    - {material: STONE, buy: 8, sell: 2}
-    - {material: OAK_LOG, buy: 15, sell: 4}
-    - {material: SAND, buy: 8, sell: 2}
-    - {material: GLASS, buy: 12, sell: 3}
-    - {material: DIRT, buy: 3, sell: 1}
-    - {material: COAL, buy: 20, sell: 5}
-    - {material: IRON_INGOT, buy: 60, sell: 15}
-    - {material: GOLD_INGOT, buy: 100, sell: 25}
-    - {material: REDSTONE, buy: 30, sell: 8}
-    - {material: LAPIS_LAZULI, buy: 30, sell: 8}
-    - {material: DIAMOND, buy: 500, sell: 120}
-    - {material: EMERALD, buy: 400, sell: 100}
-    - {material: BREAD, buy: 15, sell: 3}
-    - {material: COOKED_BEEF, buy: 25, sell: 6}
-    - {material: GOLDEN_APPLE, buy: 300, sell: 60}
-    - {material: ARROW, buy: 5, sell: 1}
-    - {material: BONE, buy: 10, sell: 2}
-    - {material: ROTTEN_FLESH, buy: 6, sell: 1}
-    - {material: GUNPOWDER, buy: 25, sell: 6}
-    - {material: STRING, buy: 10, sell: 2}
-    - {material: BLAZE_ROD, buy: 80, sell: 20}
-    - {material: ENDER_PEARL, buy: 150, sell: 35}
-    - {material: EXPERIENCE_BOTTLE, buy: 100, sell: 0}
-    - {material: TNT, buy: 200, sell: 0}
-
-# /ah  (Açık Artırma / Pazar)
-ah:
-  max-listings: 10
-  duration-hours: 48
-  tax-percent: 5       # Satıştan kesilen vergi (%)
-  min-price: 1
-
-# /order  (Alım siparişleri)
-order:
-  max-orders: 5
-
-# /3x3kazmaver  (Atlas Mc Kristal Kazma)
-pickaxe:
-  material: DIAMOND_PICKAXE
-  name: "&b&lAtlas Mc Kristal Kazma"
-  max-days: 100
+npc-isim: "&b&lRTP"

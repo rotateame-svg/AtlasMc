@@ -1,27 +1,20 @@
-name: AtlasMC
-main: net.atlasmc.AtlasMC
+name: AtlasRTP
+main: net.atlasmc.rtp.RtpPlugin
 version: 1.0.0
 api-version: '1.21'
-author: AtlasMC
-depend: [Vault]
-softdepend: [LuckPerms, Essentials]
+description: Menulu RTP sistemi ve RTP NPC
 commands:
-  shop:
-    description: Market menüsünü açar
-  afk:
-    description: AFK odasına ışınlanır / geri döner
-  kristal:
-    description: Kristal bakiyeni gösterir ve marketi açar
-  kristalmarket:
-    description: Kristal marketini açar
-  ah:
-    description: Açık artırma / pazar
-  order:
-    description: Alım siparişleri
-  '3x3kazmaver':
-    description: Süreli 3x3 Kristal Kazma verir (sadece OP)
-    usage: /3x3kazmaver <gün> [oyuncu]
+  rtp:
+    description: Isinlanma menusunu acar
+    permission: atlasrtp.use
+  rtpnpcolustur:
+    description: Bulundugunuz yerde RTP NPC olusturur
+    permission: atlasrtp.admin
+  rtpnpcsil:
+    description: En yakin RTP NPC yi siler
+    permission: atlasrtp.admin
 permissions:
-  atlasmc.admin:
-    description: Yönetici komutları
+  atlasrtp.use:
+    default: true
+  atlasrtp.admin:
     default: op
