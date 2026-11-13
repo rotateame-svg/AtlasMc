@@ -1,20 +1,21 @@
-name: AtlasRTP
-main: net.atlasmc.rtp.RtpPlugin
-version: 1.0.0
+name: RotateKasa
+version: '${project.version}'
+main: com.rotatesmp.kasa.KasaPlugin
 api-version: '1.21'
-description: Menulu RTP sistemi ve RTP NPC
+author: RotateSMP
+description: Anahtarla acilan, animasyonlu kasa (crate) sistemi
+
 commands:
-  rtp:
-    description: Isinlanma menusunu acar
-    permission: atlasrtp.use
-  rtpnpcolustur:
-    description: Bulundugunuz yerde RTP NPC olusturur
-    permission: atlasrtp.admin
-  rtpnpcsil:
-    description: En yakin RTP NPC yi siler
-    permission: atlasrtp.admin
+  kasakoy:
+    description: Baktigin yere kasa (shulker) koyar ve envanterini icine doldurur
+    usage: /kasakoy
+    permission: rotatekasa.admin
+  kasaanahtarver:
+    description: Kasa anahtari verir
+    usage: /kasaanahtarver <adet> [oyuncu]
+    permission: rotatekasa.admin
+
 permissions:
-  atlasrtp.use:
-    default: true
-  atlasrtp.admin:
+  rotatekasa.admin:
+    description: Kasa koyma, kaldirma, duzenleme ve anahtar verme
     default: op
